@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<style type="text/css">
+			body{ margin-top:20px; }
+		</style>
+		​<link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap-theme.min.css" />
+		<script type="text/javascript" src="../../assets/js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="../../assets/js/bootstrap.min.js"></script>
+		<script src="../../assets/js/jquery-3.1.1.min.js"></script>
+		<script src="restForms.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row form-group">
+			<div class="col-xs-12">
+				<ul class="nav nav-pills nav-justified thumbnail setup-panel">
+					<li class="active"><a href="#step-1">
+						<h4 class="list-group-item-heading">Step 1</h4>
+						<p class="list-group-item-text">Order details and location</p>
+					</a></li>
+					<li id="list-2"><a href="#step-2">
+						<h4 class="list-group-item-heading">Step 2</h4>
+						<p class="list-group-item-text">Current Location of Agent</p>
+					</a></li>
+					<li id="list-3"><a href="#step-3" id="final_step">
+						<h4 class="list-group-item-heading">Step 3</h4>
+						<p class="list-group-item-text">Agent distance and amount</p>
+					</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<form class="container" onsubmit="return false;">
+		<div class="row setup-content" id="step-1">
+			<div class="col-xs-12">
+				<div class="col-md-12 well text-center">
+					<h1> STEP 1</h1>
+					<div class="container col-xs-12">
+						<div class="row clearfix">
+							<div class="col-md-12 column">
+								<div class="text-left">
+									<label for="order_details">Order Details:</label>
+									<textarea type="textarea" name="order_details" id="order_details" required="true" class="form-control"></textarea><br/>
+								</div>
+								<div class="text-left">
+									<label for="delivery_location">Delivery Location:</label>
+									<input type="text" name="delivery_location" id="delivery_location" required="true" class="form-control"><br/>
+								</div>
+								<div class="text-right">
+									<button class="btn btn-primary btn-md" id="step_1_next">Next Step</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- <button id="activate-step-2" class="btn btn-primary btn-md">Activate Step 2</button> -->
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<form class="container">
+		<div class="row setup-content" id="step-2">
+			<div class="col-xs-12">
+				<div class="col-md-12 well text-center">
+					<h1 class="text-center"> STEP 2</h1>
+					<div class="container col-xs-12">
+						<div class="row clearfix">
+							<div class="col-md-12 column">
+								<div class="text-left">
+									<label for="order_id">Order Id:</label>
+									<input type="text" name="order_id" id="order_id" required="true" class="form-control"><br/>
+								</div>
+								<div class="text-left">
+									<label for="agent_username">Agent Username:</label>
+									<input type="text" name="agent_username" id="agent_username" required="true" class="form-control"><br/>
+								</div>
+								<button class="btn btn-primary btn-md">Get Location</button>
+							</div>
+						</div>
+					</div>
+					<div id="current_location" class="text-left">
+						<h4>Agent's Current Locations is: Africa</h4>
+					</div>
+					<div class="text-right">
+						<button class="btn btn-primary btn-md" id="step_2_next">Next Step</button>
+					</div>					
+				</div>
+			</div>
+		</div>
+
+	</form>
+
+	<form class="container">
+		<div class="row setup-content" id="step-3">
+			<div class="col-xs-12">
+				<div class="col-md-12 well text-center">
+					<h1 class="text-center"> STEP 3</h1>
+					<div class="container col-xs-12">
+						<div class="row clearfix">
+							<div class="col-md-12 column">
+								<div class="text-left">
+									<label for="agent_username">Agent Username:</label>
+									<input type="text" name="agent_username" id="agent_username" required="true" class="form-control"><br/>
+								</div>
+								<div class="text-left">
+									<label for="amount_for_1_km">Amount for 1 km:</label>
+									<input type="text" name="amount_for_1_km" id="amount_for_1_km" required="true" class="form-control"><br/>
+								</div>								
+								<button class="btn btn-primary btn-md">Get Details</button>
+							</Div>
+						</div>
+					</div>
+					<div id="current_location" class="text-left">
+						<h4>Total distance travelled by agent is: 100.32 KM</h4>
+						<h4>Total payable amount is: Rs. 12000</h4>
+					</div>
+					<div class="text-right">
+						<button class="btn btn-primary btn-md" id="final_submit">Submit All Details</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+</body>
+</html>
