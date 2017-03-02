@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8" />
+    <title>Soccerify Updates</title>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap-theme.min.css" />
+        <script type="text/javascript" src="../../assets/js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+        <style>
+            .input-lg {
+                border-radius: 2px;
+                background: #F5F5F5;
+            }
+            .btn-custom-green{
+                border-radius: 2px;
+                background-color: #00C853;
+                color: white;
+            }
+            .btn-custom-green:hover{
+                background-color: white;
+                border: 1px solid #00C853;
+                color: #00C853;
+            }
+            .btn-custom-blue{
+                border-radius: 2px;
+                background-color: #0277BD;
+                color: white;
+            }
+            .btn-custom-blue:hover{
+                background-color: white;
+                border: 1px solid #0277BD;
+                color: #0277BD;
+            }
+            .login-body{
+                padding: 10px;
+                padding-top: 20px;
+                border: 1px solid #eee;
+                border-top: 0px;
+            }
+            .usertype-header{
+                padding: 30px;
+                border: 1px solid #eee;
+            }
+            .active{
+                border-color: #eee;
+            }
+            .inactive{
+                background-color: #eee
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row" id="user_type_selection_route">
+                <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3 usertype-header">
+                    <center><div id="restaurant_user_type" class="col-md-12"><a href="#" class="btn btn-custom-green btn-block btn-lg">As Restaurant</a></div></center>
+                    <br /><br /><br /><br />
+                    <center><div id="agent_user_type" class="col-md-12"><a href="#" class="btn btn-custom-blue btn-block btn-lg">As Freelancer</a></div></center>
+                </div>
+            </div>
+            <div class="row" id="authentication_route">
+                <br /><br /><br />
+                <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                    <ul class="nav nav-tabs nav-justified">
+                        <li role="presentation" id="register_tab" class="active"><a href="#"><h4>SIGNUP</h4></a></li>
+                        <li role="presentation" id="login_tab" class="inactive"><a href="#"><h4>LOGIN</h4></a></li>
+                    </ul>
+                    <div class="login-body">
+                    <form role="form">
+                        <div class="row" id="register_user_name">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                                    <input type="text" name="first_name" id="name" class="form-control input-lg" placeholder="Name" tabindex="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="user_name" id="user_name" class="form-control input-lg" placeholder="Username" tabindex="3">
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <hr />
+                        <div class="row">
+                            <center><div id="register_btn_container" class="col-md-12"><a href="#" class="btn btn-custom-green btn-block btn-lg">Register</a></div></center>
+
+                            <center><div id="login_btn_container" class="col-md-12"><a href="#" class="btn btn-custom-blue btn-block btn-lg">Login</a></div></center>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
