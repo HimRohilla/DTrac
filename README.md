@@ -1,3 +1,2 @@
 # DTrac
-delivery agent
-hii
+This is a demo delivery tracking system 
